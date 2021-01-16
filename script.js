@@ -8,7 +8,11 @@ let x = document.querySelector(".guess").value;
 // const z = () => 5;
 document.querySelector(".check").addEventListener("click", function () {
   //   console.log(z());
-  let x = document.querySelector(".guess").value;
-  document.querySelector(".message").textContent = x;
-  document.querySelector(".label-score").textContent = x;
+  let x = Number(document.querySelector(".guess").value);
+  document.querySelector(".message").textContent = Number(x);
+  x < 50
+    ? (document.querySelector(".label-score").textContent =
+        "you not able to made a half century")
+    : (document.querySelector(".label-score").textContent =
+        "you made a half century");
 });
