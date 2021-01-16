@@ -10,4 +10,5 @@ document.querySelector(".check").addEventListener("click", function () {
   //   console.log(z());
   let x = document.querySelector(".guess").value;
   document.querySelector(".message").textContent = x;
+  document.querySelector(".label-score").textContent = x;
 });
