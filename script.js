@@ -21,7 +21,9 @@ function start() {
         document.querySelector(".message").textContent = "You lost the Game 🤯";
         document.querySelector(".score").textContent = "No Attempt Left";
         score = "Lost";
-        document.querySelector(".highscore").textContent = score;
+        document.querySelector("body").style.backgroundColor = "red";
+        document.querySelector(".number").textContent = target;
+        document.querySelector(".highscore").textContent = "🤡";
       }
     } else if (!x) {
       document.querySelector(".message").textContent = " 🏮  No Number ";
@@ -30,7 +32,12 @@ function start() {
       document.querySelector(".message").textContent =
         "You Got The Target Number 👑 ";
       document.querySelector(".highscore").textContent = score;
+      document.querySelector(".number").textContent = target;
+      document.querySelector("body").style.backgroundColor = "green";
     }
   });
 }
 start();
+document.querySelector(".again").addEventListener("click", function () {
+  window.location.reload();
+});
